@@ -1,0 +1,18 @@
+# Create a simple 16x16 pixel favicon.ico using Python's Pillow (PIL) library.
+
+from PIL import Image
+
+def create_favicon(filename="favicon.ico", size=(16, 16), color=(255, 0, 0)):
+    """
+    Creates a simple favicon.ico file.
+
+    Args:
+        filename (str): The name of the output file.
+        size (tuple): The size of the favicon (width, height).
+        color (tuple): The RGB color of the favicon (e.g., (255, 0, 0) for red).
+    """
+    image = Image.new("RGB", size, color)
+    image.save(filename, format="ICO")
+
+if __name__ == "__main__":
+    create_favicon() #creates a red 16x16 favicon.ico
